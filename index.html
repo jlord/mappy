@@ -1,1 +1,42 @@
-<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d17992.46989077067!2d12.553839074092618!3d55.687966571169554!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1400059655934" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tabletop1.3.4.js"></script>
+    <script type="text/javascript" src="js/sheetsee.js"></script>
+    <link rel='stylesheet' type='text/css' href='http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.css'  />
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    <title> </title>
+  </head>
+  <style>
+    #map {width: 500px; height: 500px; background-color: #ff00ff;}
+  </style>
+  <body>
+    <!-- HTML -->
+    <div id="map"></div>
+
+    <!-- Templates -->
+    <script id="placeholder" type="text/html">
+      // template HTML here
+    </script>
+
+    <!-- JavaScript -->
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+          var URL = "1jOz6yFY5nIDre5RYtVROYPgIbkgh9lIddsyXo0-79_0"
+          Tabletop.init( { key: URL, callback: myData, simpleSheet: true } )
+      })
+      function myData(data) {
+        console.log(data)
+        var opts = ['description']
+        var geojson = Sheetsee.createGeoJSON(data, opts)
+        console.log(geojson)
+        var template = "<ul>"
+                     + "<li><h4>{{description}}</h4></li></ul>"
+        var map = Sheetsee.loadMap("map")
+        Sheetsee.addTileLayer(map, 'examples.map-20v6611k')
+        var markerLayer = Sheetsee.addMarkerLayer(geojson, map, template)
+      }
+    </script>
+  </body>
+</html>
