@@ -9,7 +9,7 @@
     <title> </title>
   </head>
   <style>
-    #map {width: 500px; height: 500px; background-color: #ff00ff;}
+    #map {width: 100%; height: 100%; background-color: #ff00ff;}
   </style>
   <body>
     <!-- HTML -->
@@ -27,12 +27,11 @@
           Tabletop.init( { key: URL, callback: myData, simpleSheet: true } )
       })
       function myData(data) {
-        console.log(data)
+        console.log("The data ", data)
         var opts = ['description']
         var geojson = Sheetsee.createGeoJSON(data, opts)
-        console.log(geojson)
-        var template = "<ul>"
-                     + "<li><h4>{{description}}</h4></li></ul>"
+        console.log("The geoJSON ",JSON.stringify(geojson, null, ' '))
+        var template = "<h4>{{description}}</h4>"
         var map = Sheetsee.loadMap("map")
         Sheetsee.addTileLayer(map, 'examples.map-20v6611k')
         var markerLayer = Sheetsee.addMarkerLayer(geojson, map, template)
