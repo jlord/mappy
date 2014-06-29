@@ -1,4 +1,6 @@
-# Fork-n-Go Fullscreen Map from Spreadsheet
+![forkngo](badge3.png)
+
+# Fullscreen Map from Spreadsheet
 
 This creates a website with a fullscreen map of points from a Google Spreadsheet with latitude and longitude columns.
 
@@ -30,4 +32,4 @@ Here are some other things you may want to do.
 
 - **Change your repository's name**. Because maybe 'mappy' isn't right for you. Click the Settings icon on your fork's GitHub page to change the name.
 - Add a **custom domain**. If you don't like the default github.io/repo naming scheme, you can use a custom domain that you own. Here are [instructions](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages) on how.
-- Change map tiles! You can design your own with Mapbox [here](https://www.mapbox.com/editor/).
+- **Change map tiles!** You can design your own with Mapbox [here](https://www.mapbox.com/editor/).
