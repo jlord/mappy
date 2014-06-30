@@ -1,4 +1,4 @@
-![forkngo](badge3.png)
+<img src="badge3.png" alt="fork n go" style="width: 200px;">
 
 # Fullscreen Map from Spreadsheet
 
