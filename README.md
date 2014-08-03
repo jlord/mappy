@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/sky.png" alt="fork n go" style="width: 200px;">
+<img src="https://raw.githubusercontent.com/jlord/forkngo/gh-pages/badges/sky.png" alt="fork n go" width="200">
 
 # Fullscreen Map from Spreadsheet
 
