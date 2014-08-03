@@ -5,12 +5,13 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/tabletop1.3.4.js"></script>
     <script type="text/javascript" src="js/sheetsee.js"></script>
-    <link rel='stylesheet' type='text/css' href='http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.css'  />
+    <link   type='text/css' rel='stylesheet' href='http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.css'>
     <!-- Add a Title -->
     <title>Map</title>
   </head>
   <style>
-    body {margin: 0;}
+    html {width: 100%; height: 100%;}
+    body {width: 100%; height: 100%; margin: 0;}
     /* How about a different background color? */
     #map {width: 100%; height: 100%; background-color: #F7CE86;}
     .leaflet-popup-content li {list-style:none;}
@@ -38,8 +39,12 @@
                      + "<li><h4>{{placename}}</h4></li></ul>"
         var geoJSON = Sheetsee.createGeoJSON(data, optionsJSON)
         var map = Sheetsee.loadMap("map")
-        // Maybe different map tiles? examples.map-20v6611k
-        Sheetsee.addTileLayer(map, 'examples.map-h67hf2ic')
+        // Try different map tiles? examples.map-20v6611k
+        // examples.map-y7l23tes
+        // examples.map-h67hf2ic
+        // examples.map-i86nkdio
+        // examples.h186knp8
+        Sheetsee.addTileLayer(map, 'examples.map-i86nkdio')
         Sheetsee.addMarkerLayer(geoJSON, map, template)
       }
     </script>
